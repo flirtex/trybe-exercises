@@ -76,11 +76,16 @@
     divPai.appendChild(div2);
 
     // 4. Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
-   let tagP = document.createElement('p');
-   tagP.innerText = 'Exercise 4';
-   let divPai3 = document.getElementsByTagName('div')[1];
-   divPai3.appendChild(tagP);
-   
+    let tagP = document.createElement('p');
+    tagP.innerText = 'Exercise 4';
+    let divPai3 = document.getElementsByTagName('div')[1];
+    divPai3.appendChild(tagP);
+
+    // 5. Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+    let div5 = document.createElement('div');
+    div5.className = "left-content";
+    let divPai5 = document.getElementsByTagName('div')[0];
+    divPai5.appendChild(div5);
 
   </script>
 </body>
