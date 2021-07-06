@@ -66,16 +66,25 @@
     mudaCor('rgb(76, 164, 109)');
     /*Crie uma função que mude a cor do quadrado vermelho para branco.*/
 
-    function mudaCor2(cor){
+    function mudaCor2(cor) {
       document.getElementsByClassName('center-content')[0].style.backgroundColor = cor;
     }
 
     mudaCor2('#FFF');
     /*
     Crie uma função que corrija o texto da tag <h1>.
-    Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-    Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-           */
+    */
+    
+    function alteraTexto(texto){
+      document.getElementsByTagName('h1')[0].innerText = texto;
+    }
+
+    alteraTexto('Exercício 5.1 - Javascripit');
+
+    /*
+        Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+               */
   </script>
 </body>
 
