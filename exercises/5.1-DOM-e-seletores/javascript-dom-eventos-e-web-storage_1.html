@@ -74,8 +74,8 @@
     /*
     Crie uma função que corrija o texto da tag <h1>.
     */
-    
-    function alteraTexto(texto){
+
+    function alteraTexto(texto) {
       document.getElementsByTagName('h1')[0].innerText = texto;
     }
 
@@ -83,6 +83,19 @@
 
     /*
         Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+
+     */
+
+    function letrasMaiusculas() {
+      for (let i = 0; i < document.getElementsByTagName('p').length; i += 1) {
+        let paragrafo = document.getElementsByTagName('p')[i];
+        paragrafo.innerText = paragrafo.innerText.toUpperCase();
+      }
+    }
+
+    letrasMaiusculas();
+
+    /*
         Crie uma função que exiba o conteúdo de todas as tags <p> no console.
                */
   </script>
