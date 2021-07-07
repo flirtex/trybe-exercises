@@ -99,7 +99,30 @@
     imagem.className = "small-image";
     div5.appendChild(imagem);
 
+    // 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+    let listaNaoOrdenada = document.createElement('ul');
+    let itensLista = ['Um', 'Dois', 'Tres', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+    div6.appendChild(listaNaoOrdenada);
+      for (let i = 0; i < itensLista.length; i += 1) {
+        let itemLista = document.createElement('li');
+        itemLista.innerText = itensLista[i];
+        listaNaoOrdenada.appendChild(itemLista);
+      }
+   
 
+
+
+
+    // itemLista.innerText = 'Um';
+    // itemLista.innerText = 'Dois';
+    // itemLista.innerText = 'Tres';
+    // itemLista.innerText = 'Quatro';
+    // itemLista.innerText = 'Cinco';
+    // itemLista.innerText = 'Seis';
+    // itemLista.innerText = 'Sete';
+    // itemLista.innerText = 'Oito';
+    // itemLista.innerText = 'Nove';
+    // itemLista.innerText = 'Dez';
   </script>
 </body>
 
