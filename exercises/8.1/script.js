@@ -29,5 +29,32 @@ const resultSorteio = (numeroApostado) => {
   return 'Tente Novamente';
 }
 
+// Exercise 3
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
+function conferencia(){
+  let contador = 0;
+  for(let i = 0; i < RIGHT_ANSWERS.length; i +=1){
+    for(let j = 0; j < STUDENT_ANSWERS.length; j +=1){
+      if(RIGHT_ANSWERS[i] === STUDENT_ANSWERS[j]){
+        contador += 1;
+        i += 1;
+      }else if(RIGHT_ANSWERS[i] !== STUDENT_ANSWERS[j] && STUDENT_ANSWERS[j] !== 'N.A'){
+        contador -= 0.5;
+        i += 1;
+      }else{
+        i += 1;
+      }
+     
+    }
+  }
+  return contador;
+}
 
+const hofConferencia = (gabarito, respostasPessoaEstudante, checkRespostas) => {
+  let conf = checkRespostas();
+  return conf;
+ }
+
+console.log(hofConferencia(RIGHT_ANSWERS, STUDENT_ANSWERS, conferencia));
