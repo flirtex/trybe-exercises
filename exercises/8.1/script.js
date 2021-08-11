@@ -1,3 +1,4 @@
+// Exercise 1
 const newEmployees = () => {
   const employees = {
     id1: pessoaContratada('Pedro Guerra'), // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
@@ -18,3 +19,15 @@ function pessoaContratada(nomeCompleto) {
   })
   return pessoa;
 }
+
+// Exercise 2
+const resultSorteio = (numeroApostado) => {
+  let numeroAleatorio = Math.floor(Math.random() * (5 - 1 + 1) + 1);
+  if(numeroApostado === numeroAleatorio){
+    return 'Parabéns Você Ganhou'
+  }
+  return 'Tente Novamente';
+}
+
+
+
