@@ -65,6 +65,7 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
+//Exercicio 1
 
 const pesquisa = books.find((author) => author.author.birthYear === 1947);
 
@@ -74,3 +75,25 @@ function authorBornIn1947() {
   }
 
   assert.strictEqual(authorBornIn1947(), 'Stephen King');
+
+  //Exercicio 2
+
+  function smallerName() {
+    let nameBook = [];
+    let array = [];
+    let minimo;
+    // escreva aqui o seu código
+    books.forEach((livros) => { 
+    array.push(livros.name.length);
+    minimo = Math.min(...array);
+    if(livros.name.length === minimo){
+        nameBook = livros.name;
+    }
+    })
+    console.log(`O Menor Nome Possui ${minimo} letras e é o ${nameBook}`);
+    // Variável nameBook que receberá o valor do menor nome;
+    return nameBook;
+  }
+  
+  assert.strictEqual(smallerName(), 'Duna');
+
