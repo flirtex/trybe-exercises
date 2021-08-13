@@ -90,10 +90,30 @@ function authorBornIn1947() {
         nameBook = livros.name;
     }
     })
-    console.log(`O Menor Nome Possui ${minimo} letras e é o ${nameBook}`);
     // Variável nameBook que receberá o valor do menor nome;
     return nameBook;
   }
   
   assert.strictEqual(smallerName(), 'Duna');
+
+  //Exercicio 3
+  function getNamedBook() {
+		const buscar = books.find((livro) => livro.name.length === 26);
+		return buscar;
+  }
+
+	getNamedBook();
+
+	const expectedResult = {
+		author: {
+			birthYear: 1948,
+			name: 'George R. R. Martin',
+		},
+		genre: 'Fantasia',
+		id: 1,
+		name: 'As Crônicas de Gelo e Fogo',
+		releaseYear: 1991,
+	};
+  
+  assert.deepStrictEqual(getNamedBook(), expectedResult);
 
